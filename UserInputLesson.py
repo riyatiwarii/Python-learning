@@ -1,0 +1,10 @@
+''' print("Enter your number")
+impnum = input()
+print("Enter your number 2")
+riya = input()
+print("You entered",int(impnum) + int(riya))'''
+print("Enter first decimal number")
+first = input()
+print("Enter second decimal number")
+second = input()
+print("The sum of two decimal numbers is", float(first) + float(second))

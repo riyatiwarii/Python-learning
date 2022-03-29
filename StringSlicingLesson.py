@@ -1,0 +1,12 @@
+mystr = "Good night beautiful people"
+print(len(mystr))
+print(mystr[0:10])
+print(mystr[3])
+print(mystr[-6:-3])
+print(mystr[-6::-2])
+print(mystr[::2])
+print(mystr[::-1])
+print(mystr.isalpha())
+print(mystr.endswith("people"))
+print(mystr.count("o"))
+print(mystr.upper())
