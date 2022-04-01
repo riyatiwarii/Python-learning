@@ -2,99 +2,57 @@
 # lock or retrive
 # 3 clients - Harry, Rohan and Hammad
 # Total 6 file
-# 3 file food lock
-# 3 file excercise lock
-# write a function that when executed takes as input client name
-# one more function to retrive exercise or food for any client
-# a = int(input("lock or retrive 1 for lock & 2 for retrive\n"))
-# c = int(input("1 for Harry, 2 for Rohan & 3 for Hammad\n"))
-# fe = int(input("food or exercise 1 for food & 2 for excercise\n"))
-print("Health Management System")
-clientname = int(input("Enter 1 for Harry or  2 for Rohan or 3 for Hammad\n"))
-lockret = int(input("Enter 1 for locking data or 2 for retrieving data\n"))
-foodexe = int(input("Enter 1 for food or 2 for exercise\n"))
-if clientname == 1:
-    if lockret == 1:
-        if foodexe == 1:
-            f = open("Harryfood.txt","a")
-            food = input("Enter food to add\n")
-            f.write( food + "\n")
-            print("food entered successfully.")
-            f.close()
-        elif foodexe == 2:
-            f = open("Harryexe.txt","a")
-            exercise = input("Enter exercise to add\n")
-            f.write(exercise + "\n")
-            print("Exercise entered successfully.")
-        else:
-            print("enter right choice")
-    elif lockret == 2:
-        if foodexe == 1:
-            f = open("Harryfood.txt","r")
-            for i in f:
-                print(i, end="")
-            f.close()
-        elif foodexe == 2:
-            f = open("Harryexe.txt", "r")
-            for i in f:
-                print(i, end="")
-            f.close()
-        else:
-            print("enter right choice")
-if clientname == 2:
-    if lockret == 1:
-        if foodexe == 1:
-            f = open("Rohanfood.txt","a")
-            food = input("Enter food to add\n")
-            f.write( food + "\n")
-            print("food entered successfully.")
-            f.close()
-        elif foodexe == 2:
-            f = open("Rohanexe.txt","a")
-            exercise = input("Enter exercise to add\n")
-            f.write(exercise + "\n")
-            print("Exercise entered successfully.")
-        else:
-            print("enter right choice")
-    elif lockret == 2:
-        if foodexe == 1:
-            f = open("Rohanfood.txt","r")
-            for i in f:
-                print(i, end="")
-            f.close()
-        elif foodexe == 2:
-            f = open("Rohanexe.txt", "r")
-            for i in f:
-                print(i, end="")
-            f.close()
-        else:
-            print("enter right choice")
-if clientname == 3:
-    if lockret == 1:
-        if foodexe == 1:
-            f = open("Hammadfood.txt","a")
-            food = input("Enter food to add\n")
-            f.write(food + "\n")
-            print("food entered successfully.")
-            f.close()
-        elif foodexe == 2:
-            f = open("Hammadexe.txt","a")
-            exercise = input("Enter exercise to add\n")
-            f.write(exercise + "\n")
-            print("Exercise entered successfully.")
-        else:
-            print("enter right choice")
-    elif lockret == 2:
-        if foodexe == 1:
-            f = open("Hammadfood.txt","r")
-            for i in f:
-                print(i, end="")
-            f.close()
-        elif foodexe == 2:
-            f = open("Hammadexe.txt", "r")
-            for i in f:
-                print(i, end="")
-            f.close()
-        else:
-            print("enter right choice")
+# 3 file food
+# 3 file excercise
+# write a function that when executed takes an input of client's name and gives the option to log or retrieve information.
+# Health Management System
 
+client_list= {1:"Harry", 2:"Rohan",3:"Hammad"}
+log_list = {1:"Exercise",2:"Diet"}
+# print(client_list.items())
+# print(client_list.keys())
+
+def gettime():
+    import datetime
+    return datetime.datetime.now()
+
+try:
+    print("Select client name:")
+    for key, value in client_list.items():
+        print("Press",key,"for",value,"\n",end="")
+    client_name = int(input())
+    print("Selected Client :", client_list[client_name], "\n",end="")
+
+    print("Press 1 for log")
+    print("Press 2 for retrieve")
+    op = int(input())
+
+    if op == 1:
+        for key, value in log_list.items():
+            print("Press", key, "for",value, "\n",end="")
+        lock_name = int(input())
+        print("Selected Job:", log_list[lock_name])
+        f = open(client_list[client_name]+ "_"+log_list[lock_name]+".txt","a")
+        k="y"
+        while (k != "n"):
+            print("Enter",log_list[lock_name], "\n", end="")
+            mytext = input()
+            f.write("[" + str(gettime()) + "]:"+mytext+"\n")
+            k = input("Add more ? y/n")
+            continue
+        print(log_list[lock_name],"Records Saved Successfully for",client_list[client_name])
+        f.close()
+    elif op == 2:
+        for key, value in log_list.items():
+            print("Press", key, "to retrieve", value, "\n", end="")
+        lock_name = int(input())
+        print(client_list[client_name]+"_" +log_list[lock_name],"Report: ","\n",end="")
+        f = open(client_list[client_name]+ "_"+log_list[lock_name]+".txt")
+        contents = f.readlines()
+        for line in contents:
+            print(line,end ="")
+        f.close()
+    else:
+        print("Invalid Input!!!")
+except Exception as e:
+    print("Provide the correct details")
