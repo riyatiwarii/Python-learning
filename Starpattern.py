@@ -13,19 +13,19 @@ elif boolean == 1:
             print("*",end=" ")
         print()
 
-row = int(input("Enter the no. of rows for your star pattern:\n"))
-for i in range(row):
-    for j in range(row):
-        print("$", end="   ")
-    print()
-
-row = int(input("Enter the no. of rows for your star pattern:\n"))
-for i in range(row):
-     for j in range(i+1):
-         print(" ",end=" ")
-         for j in range(row-i):
-             print("*",end=" ")
-     print()
+# row = int(input("Enter the no. of rows for your star pattern:\n"))
+# for i in range(row):
+#     for j in range(row):
+#         print("$", end="   ")
+#     print()
+#
+# row = int(input("Enter the no. of rows for your star pattern:\n"))
+# for i in range(row):
+#      for j in range(i+1):
+#          print(" ",end=" ")
+#          for j in range(row-i):
+#              print("*",end=" ")
+#      print()
 
 
 

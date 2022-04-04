@@ -14,7 +14,7 @@
 # cube_num = list(map(lambda x: x**3, original_nums))
 # print(cube_num)
 
-# Write a Python program to find if a given string starts with a given character using Lambda
+# A Python program to find if a given string starts with and ends with a given character using Lambda
 
 # starts_with = lambda x: True if x.startswith('P') else False
 # print(starts_with('Preeti'))
@@ -25,3 +25,20 @@
 # print(ends_with('Preeti'))
 # ends_with = lambda x: True if x.endswith('j') else False
 # print(ends_with('Preeti'))
+
+# A Python program to extract year, month, date and time using Lambda
+
+# import datetime
+# now = datetime.datetime.now()
+# print(now)
+# year = lambda x: x.year
+# month = lambda x: x.month
+# day = lambda x: x.day
+# t = lambda x: x.time()
+# print(year(now))
+# print(month(now))
+# print(day(now))
+# print(t(now))
+
+
+
