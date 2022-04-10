@@ -11,6 +11,12 @@
 # date1 = datetime.date(day, month, year)
 # print(date1.strftime("%A"))
 
+# from datetime import datetime
+# now = datetime.now()
+# print(now)
+# day = now.strftime("%A")
+# print(day)
+
 # print("Trying out random module.")
 # import random
 # a = random.randint(0, 10)

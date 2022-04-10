@@ -4,12 +4,15 @@
 # print(b)
 
 #Traverse string with a while or for loop.
-# name = "Riya"
+# name = "RIYA"
 # i = 0
 # while i < len(name):
 #     a = name[i]
 #     print(a)
 #     i = i + 1
+
+# for i in "RIYA":
+#     print(i)
 
 #Traverse string with a while or for loop.
 # name = "Preeti"
@@ -23,15 +26,17 @@
 #     i += 1
 
 #Search a character in string.
-def search(char, str):
-    print(len(str))
-    i = 0
-    while i < len(str):
-        if str[i] == char:
-            return 1
-            i += 1
-        return -1
+# def search(char, str):
+#     print(len(str))
+#     i = 0
+#     while i < len(str):
+#         if str[i] == char:
+#             return 1
+#             i += 1
+#         return -1
+#
+# print(search("Y","TIWARI"))
 
-print(search("Y","TIWARI"))
+
 
 
