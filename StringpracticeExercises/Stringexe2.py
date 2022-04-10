@@ -21,5 +21,21 @@ If the given string already ends with 'ing' then add 'ly' instead. If the string
 # else:
 #     print(samplestr+"ing")
 
-
-
+'''
+Write a Python function that takes a list of words and return the longest word and the length of the
+longest one.'''
+samplelist = ["Phenomenal","Gorgeous","Dazzling","Ravishing","Pulchritudinous"]
+long_samplelist = max(samplelist, key=len)
+print(long_samplelist)
+print(len(long_samplelist))
+'''
+Write a Python program to change a given string to a new string where the first and last chars 
+have been exchanged.
+'''
+samplestr = "Riya"
+a = samplestr[-1:]
+b = a.capitalize()
+c = samplestr[:1]
+d = c.lower()
+new_str = b +samplestr[1:-1]+ d
+print(new_str)
