@@ -1,3 +1,5 @@
+''' Write a Python program to count the occurrences of each word in a given sentence. '''
+
 samplestr = "Riya"
 newstr = ""
 for i in range(len(samplestr)):
@@ -5,20 +7,20 @@ for i in range(len(samplestr)):
         newstr = newstr+samplestr[i]
 print(newstr)
 
-string = "big black bug bit a big black dog on his big black nose";
+''' Write a Python program to count the occurrences of each word in a given sentence. '''
 
-# # Split the string into words using built-in function
-# words = string.split(" ");
-#
-# print("Duplicate words in a given string : ");
-# for i in range(0, len(words)):
-#     count = 1;
-#     for j in range(i+1, len(words)):
-#         if (words[i] == (words[j])):
-#             count = count + 1;
-#             # Set words[j] to 0 to avoid printing visited word
-#             words[j] = "0";
-#
-#             # Displays the duplicate word if count is greater than 1
-#     if (count > 1 and words[i] != "0"):
-#         print(words[i]);
+sample = "Big black bug bit a big black dog on his big black nose"
+sample = sample.lower()
+def word_count(str):
+    words = sample.split(" ")
+    count = dict()
+    for word in words:
+        if word in count:
+            count[word] += 1
+        else:
+            count[word] = 1
+    return count
+print(word_count(sample))
+
+
+
