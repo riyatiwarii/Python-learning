@@ -13,9 +13,9 @@ print(string.startswith("cur"))
 
 import textwrap
 sample_text = '''
-  A paragraph (from Ancient Greek παράγραφος (parágraphos) 'to write beside') is a self-contained unit of discourse in 
-  writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by
-   the syntax of any language, 
+A paragraph (from Ancient Greek παράγραφος (parágraphos) 'to write beside') is a self-contained unit of discourse in 
+writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by
+the syntax of any language, 
   '''
 print()
 print(textwrap.fill(sample_text, width=50))
@@ -30,10 +30,10 @@ print(words)
 print(" ".join(words))
 
 # Doubt
-# def reverse_string_words(text):
-#     for line in text.split('\n'):
-#         return(' '.join(line.split()[::-1]))
-# print(reverse_string_words("The quick brown fox jumps over the lazy dog."))
+def reverse_string_words(text):
+    for line in text.split('\n'):
+        return(' '.join(line.split()[::-1]))
+print(reverse_string_words("The quick brown fox jumps over the lazy dog."))
 
 ''' a Python program to strip a set of characters from a string.'''
 
