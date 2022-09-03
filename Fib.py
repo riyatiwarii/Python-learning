@@ -1,27 +1,8 @@
-def iterative_fibonacci(n):
-
-    a = 0
-    b = 1
-
-    if n==1:
-        print(a)
-
-    elif n<=0:
-        print("No negative values allowed.")
-
-    elif n>11:
-        print("Fibonacci is greater than 100")
-
-    else:
-
-        print(a)
-        print(b)
-
-        for i in range(2,n):
-            c = a + b
-            a = b
-            b = c
-
-            print(c)
-
-iterative_fibonacci(6)
+fibonacciList = [0, 1]
+# finding 10 terms of the series starting from 3rd term
+N = int(input("Enter the no. of terms: \n"))
+for term in range(3, N + 1):
+    value = fibonacciList[term - 3] + fibonacciList[term - 2]
+    fibonacciList.append(value)
+print(f"{N} terms of the fibonacci series are:")
+print(fibonacciList)
